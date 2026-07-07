@@ -29,6 +29,19 @@ import google_logo from './google_logo.svg'
 import menu_icon_dark from './menu_icon_dark.svg'
 import sun_icon from './sun_icon.svg'
 import moon_icon from './moon_icon.svg'
+import st_live from './story-tellers.png'
+import open_book from './open-book.png'
+import bighouse from './bighouse.png'
+import cc from './conference-contacts.png'
+import resed from './resed.png'
+import gmacademy from './globalmaxacademy.png'
+import saepio from './saepio.png'
+import staircase from './staircase.png'
+import progent from './progent.png'
+
+
+
+
 
 
 export const company_logos = [
@@ -39,6 +52,7 @@ export const company_logos = [
   airbnb_logo,
   google_logo,
 ]
+
 
 const assets = {
   logo,
@@ -65,7 +79,16 @@ const assets = {
   logo_dark,
   menu_icon_dark,
   sun_icon,
-  moon_icon
+  moon_icon,
+  st_live,
+  open_book,
+  bighouse,
+  cc,
+  resed,
+  gmacademy,
+  saepio,
+  staircase,
+  progent
 }
 
 export default assets
