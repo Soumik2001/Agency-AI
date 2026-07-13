@@ -4,6 +4,8 @@ import Hero from './components/Hero'
 import LogoCarousel from './components/LogoCarousel';
 import Services from './components/Services';
 import OurWork from './components/OurWork'
+import Team from './components/Team';
+import ContactUs from './components/ContactUs';
 
 const App = () => {
 
@@ -29,6 +31,8 @@ const App = () => {
         <LogoCarousel />
         <Services />
         <OurWork />
+        <Team />
+        <ContactUs />
       </div>
     </div>
   )

@@ -29,7 +29,7 @@ const Services = () => {
     ]
 
     return (
-        <div id="services" className="relative flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 py-10 md:py-25 lg:py-28 text-gray-700 dark:text-white">
+        <div id="services" className="relative flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 py-10 md:py-25 lg:py-28 lg:pb-10 text-gray-700 dark:text-white">
             <img src={assets.bgImage2} alt="Bg Image" className=" absolute -top-70 -left-70 -z-1 dark:hidden" />
 
             <Title title="Our Services" description="Discover the range of services we offer to help your business grow and succeed in the digital landscape." />

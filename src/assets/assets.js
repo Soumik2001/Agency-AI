@@ -38,8 +38,14 @@ import gmacademy from './globalmaxacademy.png'
 import saepio from './saepio.png'
 import staircase from './staircase.png'
 import progent from './progent.png'
-
-
+import team1 from './soumik.jpg'
+import team2 from './swagata.jpg'
+import team3 from './jibesh.jpg'
+import team4 from './nivedita.jpg'
+import team5 from './subhajyoti.jpg'
+import team6 from './soumita.jpg'
+import team7 from './sujit.jpg'
+import team8 from './binoy.jpg'
 
 
 
@@ -94,12 +100,12 @@ const assets = {
 export default assets
 
 export const teamData = [
-  { name: 'Haley Carter', title: 'CEO & founder', image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200' },
-  { name: 'James Walker', title: 'Ads manager', image: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200' },
-  { name: 'Jessica Morgan', title: 'Vice president', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&h=200&auto=format&fit=crop' },
-  { name: 'Ashley Bennett', title: 'Marketing & sales', image: 'https://randomuser.me/api/portraits/women/10.jpg' },
-  { name: 'Emily Parker', title: 'Content marketer', image: 'https://randomuser.me/api/portraits/women/11.jpg' },
-  { name: 'Ryan Mitchell', title: 'Content writer', image: 'https://randomuser.me/api/portraits/men/9.jpg' },
-  { name: 'Megan Brooks', title: 'Performance manager', image: 'https://randomuser.me/api/portraits/women/12.jpg' },
-  { name: 'Amber Foster', title: 'Senior writer', image: 'https://randomuser.me/api/portraits/women/14.jpg' },
+  { name: 'Soumik Mondal', title: 'CEO & founder', image: team1 },
+  { name: 'Swagata Manna', title: 'Sr. Backend Developer', image: team2 },
+  { name: 'Jibesh Pahari', title: 'Web Programmer', image: team3 },
+  { name: 'Nivedita Khanra', title: 'Jr. Backend Developer', image: team4 },
+  { name: 'Subhajyoti Das', title: 'Sr. Web Developer', image: team5 },
+  { name: 'Soumita Pandit Samanta', title: 'Jr. Web Developer', image: team6 },
+  { name: 'Sujit Maity', title: 'Sr. Web Developer', image: team7 },
+  { name: 'Binoy Saha', title: 'Jr. Web Developer', image: team8 },
 ]

@@ -78,7 +78,7 @@ const Hero = () => {
 
     return (
         <div
-            id="hero"
+            id="home"
             className="flex flex-col items-center justify-center gap-6 py-24 pb-10 md:py-30 md:pb-14 lg:py-40 px-4 sm:px-12 lg:px-24 xl:px-40 text-center w-full overflow-hidden text-gray-700 dark:text-white"
         >
             <div className="inline-flex items-center gap-2 border border-gray-300 p-1.5 pr-4 rounded-full">
@@ -94,7 +94,7 @@ const Hero = () => {
 
             <h1
                 ref={headingRef}
-                className="text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium leading-[50px] sm:leading-[60px] xl:leading-[120px] max-w-5xl font-chewy"
+                className="text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium leading-[50px] sm:leading-[60px] md:leading-[80px] xl:leading-[120px] max-w-5xl font-chewy"
             >
                 Turning imagination into <br />{" "}
                 <span className="bg-gradient-to-r from-[#5044e5] to-[#4d8cea] bg-clip-text text-transparent">

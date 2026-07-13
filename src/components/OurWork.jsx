@@ -19,7 +19,7 @@ const WorkCard = ({ project, truncateWords }) => {
             onMouseEnter={() => setShowGlow(true)}
             onMouseLeave={() => setShowGlow(false)}
             onMouseMove={handleMouseMove}
-            className="group relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:-translate-y-2 transition-all duration-500 flex flex-col"
+            className="group relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:-translate-y-2 transition-all duration-500 flex flex-col mx-2"
         >
             <div
                 className={`pointer-events-none blur-[60px] dark:blur-2xl rounded-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 w-[100px] h-[100px] absolute z-0 transition-opacity duration-500 mix-blend-multiply dark:mix-blend-lighten ${showGlow ? 'opacity-70' : 'opacity-0'}`}
@@ -138,7 +138,7 @@ const OurWork = () => {
     };
 
     return (
-        <div id='our-work' className='flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 py-10 md:py-25 lg:py-28 text-gray-700 dark:text-white'>
+        <div id='our-work' className='flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 py-10 md:py-25 lg:py-28 lg:pb-10 text-gray-700 dark:text-white'>
 
             <Title title="Our Latest Work" description="We build fast, responsive, and scalable websites tailored to your business needs, delivering exceptional user experiences and measurable results." />
 
