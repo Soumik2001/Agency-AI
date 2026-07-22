@@ -54,7 +54,7 @@ const Footer = ({ theme }) => {
 
                 {/* Footer Bottom */}
                 <div className="pb-6 text-sm text-gray-500 flex justify-center sm:justify-between gap-4 flex-wrap">
-                    <p>Copyright 2025 &copy; Agency-AI - All Right Reserved.</p>
+                    <p>Copyright {new Date().getFullYear()} &copy; Agency-AI - All Right Reserved.</p>
                     <div className="flex items-center justify-between gap-4">
                         <a href="#" className="hover:opacity-75 transition-opacity duration-200"><img src={assets.facebook_icon} alt="Facebook" /></a>
                         <a href="#" className="hover:opacity-75 transition-opacity duration-200"><img src={assets.twitter_icon} alt="Twitter" /></a>
