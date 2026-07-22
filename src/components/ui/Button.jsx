@@ -8,6 +8,7 @@ const Button = ({
     onClick,
     className,
     type = "button",
+    disabled = false
 }) => {
     return (
         <StyledWrapper>
@@ -22,6 +23,7 @@ const Button = ({
                 <button
                     type={type}
                     onClick={onClick}
+                    disabled={disabled}
                     className={`custom-btn ${className || ""}`}
                 >
                     <span className="btn-content">

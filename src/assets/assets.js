@@ -101,8 +101,8 @@ export default assets
 
 export const teamData = [
   { name: 'Soumik Mondal', title: 'CEO & founder', image: team1 },
-  { name: 'Swagata Manna', title: 'Sr. Backend Developer', image: team2 },
-  { name: 'Jibesh Pahari', title: 'Web Programmer', image: team3 },
+  { name: 'Swagata Manna', title: 'Jr. Backend Developer', image: team2 },
+  { name: 'Jibesh Pahari', title: 'Sr. Web Programmer', image: team3 },
   { name: 'Nivedita Khanra', title: 'Jr. Backend Developer', image: team4 },
   { name: 'Subhajyoti Das', title: 'Sr. Web Developer', image: team5 },
   { name: 'Soumita Pandit Samanta', title: 'Jr. Web Developer', image: team6 },
