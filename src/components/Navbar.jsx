@@ -1,7 +1,7 @@
 
 import assets from '../assets/assets'
 import { FaArrowRight } from "react-icons/fa6";
-import Button from './ui/Button';
+import Button from "./ui/WebsiteButton";
 import { IoClose, IoReorderThree } from "react-icons/io5";
 import { useState, useEffect } from 'react';
 import ThemeToggleBtn from './ui/ThemeToggleBtn';
@@ -121,7 +121,7 @@ const Navbar = ({ theme, setTheme }) => {
                             smooth={true}
                             duration={500}
                             offset={offset}
-                            onClick={() => setSidebarOpen(false)}><Button icon={<FaArrowRight size={15} />} href="#contact-us">Contact Us</Button>
+                            onClick={() => setSidebarOpen(false)}><Button icon={<FaArrowRight size={15} />} >Contact Us</Button>
                         </Link>
                     </div>
                 </div>

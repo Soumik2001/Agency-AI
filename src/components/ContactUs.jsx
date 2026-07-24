@@ -1,7 +1,7 @@
 import { FaArrowRight } from "react-icons/fa6";
 import assets from "../assets/assets"
 import Title from "./Title"
-import Button from './ui/Button';
+import Button from './ui/WebsiteButton';
 import { useState, useEffect, useRef } from 'react';
 
 const Toast = ({ message, type, trigger, onDismiss }) => {

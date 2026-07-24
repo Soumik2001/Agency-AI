@@ -1,110 +1,57 @@
+import { Button as ButtonPrimitive } from "@base-ui/react/button"
+import { cva } from "class-variance-authority";
 
-import styled from "styled-components";
+import { cn } from "@/lib/utils"
 
-const Button = ({
-    children,
-    href,
-    icon,
-    onClick,
+const buttonVariants = cva(
+    "group/button inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+    {
+        variants: {
+            variant: {
+                default: "bg-primary text-primary-foreground hover:bg-primary/80",
+                outline:
+                    "border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
+                secondary:
+                    "bg-secondary text-secondary-foreground hover:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)] aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
+                ghost:
+                    "hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50",
+                destructive:
+                    "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
+                link: "text-primary underline-offset-4 hover:underline",
+            },
+            size: {
+                default:
+                    "h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
+                xs: "h-6 gap-1 rounded-[min(var(--radius-md),10px)] px-2 text-xs in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3",
+                sm: "h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3.5",
+                lg: "h-9 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
+                icon: "size-8",
+                "icon-xs":
+                    "size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&_svg:not([class*='size-'])]:size-3",
+                "icon-sm":
+                    "size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg",
+                "icon-lg": "size-9",
+            },
+        },
+        defaultVariants: {
+            variant: "default",
+            size: "default",
+        },
+    }
+)
+
+function Button({
     className,
-    type = "button",
-    disabled = false
-}) => {
+    variant = "default",
+    size = "default",
+    ...props
+}) {
     return (
-        <StyledWrapper>
-            {href ? (
-                <a href={href} className={`custom-btn ${className || ""}`}>
-                    <span className="btn-content">
-                        {children}
-                        {icon}
-                    </span>
-                </a>
-            ) : (
-                <button
-                    type={type}
-                    onClick={onClick}
-                    disabled={disabled}
-                    className={`custom-btn ${className || ""}`}
-                >
-                    <span className="btn-content">
-                        {children}
-                        {icon}
-                    </span>
-                </button>
-            )}
-        </StyledWrapper>
+        <ButtonPrimitive
+            data-slot="button"
+            className={cn(buttonVariants({ variant, size, className }))}
+            {...props} />
     );
-};
-
-const StyledWrapper = styled.div`
- 
-.custom-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
 }
 
-.btn-content {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-  .custom-btn {
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 9999px;
-  position: relative;
-  overflow: hidden;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  color: white;
-  background: #5044E5;
-  transition: all 0.3s ease;
-  z-index: 1;
-}
-
-.custom-btn:before,
-.custom-btn:after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  background: #ffffff;
-  transition: all 0.5s ease;
-  z-index: -1;
-}
-
-.custom-btn:before {
-  left: 50%;
-  top: 100%;
-  width: 140%;
-  height: 180%;
-  transform: translateX(-50%) scaleY(1) scaleX(1.25);
-}
-
-.custom-btn:after {
-  left: 55%;
-  top: 180%;
-  width: 160%;
-  height: 190%;
-  transform: translateX(-50%) scaleY(1) scaleX(1.45);
-}
-
-.custom-btn:hover {
-  color: #5044E5; /* text becomes purple */
-  box-shadow: 0 10px 25px rgba(80, 68, 229, 0.25);
-}
-
-.custom-btn:hover:before {
-  top: -35%;
-  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
-}
-
-.custom-btn:hover:after {
-  top: -45%;
-  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
-}
-`;
-
-export default Button;
+export { Button, buttonVariants }
